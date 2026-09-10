@@ -458,7 +458,20 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offs
 .hero-shot img{aspect-ratio:3/2;object-fit:cover;object-position:center}
 .hero h1{font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.32}
 @media (min-width:900px){.hero-grid{align-items:start}.hero-shot{position:sticky;top:88px}}
-</style>
+</style><style>
+.hooks{list-style:none;margin:1.6rem 0 0;padding:0;display:grid;gap:.85rem}
+.hooks li{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2rem .7rem;padding-left:1.5rem;position:relative;line-height:1.7}
+.hooks li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:9px;height:9px;background:var(--amber);flex:none;
+}
+.hooks b{font-family:var(--display);font-weight:700;font-size:1.12rem;letter-spacing:.01em;color:var(--ink)}
+.hooks span{font-size:.9rem;color:var(--ink-2);font-weight:300}
+@media (min-width:560px){.hooks b{font-size:1.18rem}}
+/* 開價那格再放大一點，第一眼就看到 */
+.fig.is-price dd{font-size:2.2rem}
+@media (min-width:760px){.fig.is-price dd{font-size:2.5rem}}
+</style><style>.hero-shot img{height:auto}</style>
 </head>
 <body>
 <header class="topbar">
@@ -488,9 +501,13 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--amber);outline-offs
       <div class="hero-grid">
         <div>
           <p class="crumb">新北市板橋區　・　大觀路二段　・　浮洲生活圈</p>
-          <h1>青年成家首選，<br>不用 1000 萬的<em>低樓層三房</em>。</h1>
-          <p class="hero-lede">推開門是人字拼的木地板，往裡走是重新做過的廚房和衛浴。<br>牆、地板、管線都翻新過了，而且每個月不必繳管理費。</p>
-          <p class="hero-spec">板橋大觀路二段　｜　權狀 20.36 坪・3 房 2 廳 1 衛・全室重新裝潢</p>
+          <h1>青年成家首選<br>不用 1000 萬的<br><em>低樓層三房</em></h1>
+          <ul class="hooks">
+            <li><b>1000 萬以內的三房</b><span>板橋市場上不多</span></li>
+            <li><b>全室重新裝潢</b><span>牆、地板、廚房、衛浴全部重做，搬進來就能住</span></li>
+            <li><b>管理費 0 元</b><span>沒有管委會，這筆錢留在你口袋</span></li>
+            <li><b>走路 6 分鐘到台鐵</b><span>浮洲站 450 公尺，捷運亞東醫院站 13 分鐘</span></li>
+          </ul>
           <p class="addr">新北市板橋區大觀路二段 3 巷</p>
         </div>
         <figure class="hero-shot">
